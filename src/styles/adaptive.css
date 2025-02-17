@@ -1,0 +1,11 @@
+@media screen and (max-width: 1500px) {
+    .testimonialsCarousel-prev{
+        left: 30px;
+    }
+    .testimonialsCarousel-next{
+        right: 30px;
+    }
+    .main-screen-content{
+        margin-top: 100px;
+    }
+}
