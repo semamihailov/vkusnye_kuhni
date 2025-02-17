@@ -45,6 +45,24 @@ $(function(){
         projectCarousel.trigger('to.owl.carousel', [$(this).index(), 600]);
     });
 
+    let project2Carousel = $(".project-2-carousel"); // Используем правильный класс
+    project2Carousel.owlCarousel({
+        loop:false, //Зацикливаем слайдер
+        margin:0, //Отступ от картинок если выводите больше 1
+        nav:false, //Отключил навигацию
+        autoplay: false, //Автозапуск слайдера
+        smartSpeed:1000, //Время движения слайда
+        autoplayTimeout:5000, //Время смены слайда
+        dots: false,
+        items: 1, // Количество отображаемых элементов
+    });
+    $(".project-2-next").click(function () {
+        project2Carousel.trigger('next.owl.carousel', [600]);
+    });
+    $(".project-2-prev").click(function () {
+        project2Carousel.trigger('prev.owl.carousel', [600]);
+    });
+
 
 
 

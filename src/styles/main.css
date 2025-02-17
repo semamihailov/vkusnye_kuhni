@@ -351,6 +351,7 @@ body{
     height: auto;
 }
 .projects-item-image{
+    border-radius: 20px;
     filter: brightness(70%);
     width: 100%;
     height: 367px;
@@ -360,6 +361,9 @@ body{
 }
 .projects-item-image:hover{
     transform: scale(1.02);
+}
+.owl-carousel .owl-stage-outer{
+    border-radius: 20px;
 }
 .projects-item-title{
     font-weight: 500;
@@ -680,6 +684,26 @@ body{
 .how-work-row:last-child:after{
     display: none;
 }
+.how-work-row-predouble:after{
+    left: 25%;
+    bottom: -95px;
+    content: "";
+    position: absolute;
+    height: 90px;
+    width: 2px;
+    background: var(--color-two);
+    transform: rotate(45deg);
+}
+.how-work-row-predouble:before{
+    left: 75%;
+    bottom: -95px;
+    content: "";
+    position: absolute;
+    height: 90px;
+    width: 2px;
+    background: var(--color-two);
+    transform: rotate(-45deg);
+}
 
 
 .how-work-item-title {
@@ -716,11 +740,31 @@ body{
 .project-1-dot:active{
     background-color: var(--color-three);
 }
-.project-1-carousel .owl-stage-outer{
-    border-radius: 10px;
+
+.project-2-carousel{
+    position: relative;
 }
-
-
+.project-2-prev,
+.project-2-next {
+    position: absolute;
+    cursor: pointer;
+    background: transparent;
+    z-index: 2;
+}
+.project-2-prev img,
+.project-2-next img{
+    width: 40px;
+    height: 40px;
+}
+.project-2-prev{
+    top: calc(50% - 42px);
+    left: -20px;
+}
+.project-2-next{
+    top: calc(50% - 42px);
+    right: -20px;
+    transform: rotate(180deg);
+}
 
 
 
