@@ -6,14 +6,14 @@ $(function(){
 
     let testimonialsCarousel = $(".carousel-one"); // Используем правильный класс
     testimonialsCarousel.owlCarousel({
-        loop:false, //Зацикливаем слайдер
+        loop:true, //Зацикливаем слайдер
         margin:20, //Отступ от картинок если выводите больше 1
         nav:false, //Отключил навигацию
         autoplay: false, //Автозапуск слайдера
         smartSpeed:1000, //Время движения слайда
         autoplayTimeout:5000, //Время смены слайда
-        dots: true,
-        dotsContainer: '#carousel-one-dots',
+        dots: false,
+        // dotsContainer: '#carousel-one-dots',
         items: 1, // Количество отображаемых элементов
     });
 
@@ -24,9 +24,9 @@ $(function(){
         testimonialsCarousel.trigger('prev.owl.carousel', [600]);
     });
 
-    $('.carousel-one-dot').click(function () {
-        testimonialsCarousel.trigger('to.owl.carousel', [$(this).index(), 600]);
-    });
+    // $('.carousel-one-dot').click(function () {
+    //     testimonialsCarousel.trigger('to.owl.carousel', [$(this).index(), 600]);
+    // });
 
     let projectCarousel = $(".project-1-carousel"); // Используем правильный класс
     projectCarousel.owlCarousel({
@@ -36,13 +36,8 @@ $(function(){
         autoplay: false, //Автозапуск слайдера
         smartSpeed:1000, //Время движения слайда
         autoplayTimeout:5000, //Время смены слайда
-        dots: true,
-        dotsContainer: '#project-1-dots',
+        dots: false,
         items: 1, // Количество отображаемых элементов
-    });
-
-    $('.project-1-dot').click(function () {
-        projectCarousel.trigger('to.owl.carousel', [$(this).index(), 600]);
     });
 
     let project2Carousel = $(".project-2-carousel"); // Используем правильный класс
@@ -73,7 +68,11 @@ $(function(){
 
 
 
-    $( "#accordion" ).accordion();
+    $( "#accordion" ).accordion({
+        active: false,
+        collapsible: true,
+        heightStyle: "content",
+    });
 
     $("#goTop").click(function() {
         $('html, body').animate({ scrollTop: 0 }, 1000);
@@ -170,6 +169,21 @@ $(function(){
             document.querySelector('.main-video').classList.add('show');
             document.querySelector(".main-video-close").style.display = "block";
             document.querySelector(".main-video-open").style.display = "none";
+        });
+        document.querySelector(".main-video-close-page").addEventListener("click", () => {
+            document.querySelector('.main-video').classList.add('none');
+            document.querySelector(".main-video-open-page").style.display = "block";
+        });
+        document.querySelector(".main-video-close-page").addEventListener("click", () => {
+            document.querySelector('.main-video').classList.add('none');
+            document.querySelector(".main-video-open-page").style.display = "block";
+            document.querySelector(".main-video-open").style.display = "none";
+            video.pause();
+        });
+        document.querySelector(".main-video-open-page").addEventListener("click", () => {
+            document.querySelector('.main-video').classList.remove('none');
+            document.querySelector('.main-video').classList.add('show');
+            // document.querySelector(".main-video-open-page").style.display = "none";
         });
     }
 
