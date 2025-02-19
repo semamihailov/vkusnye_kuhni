@@ -465,6 +465,7 @@ body{
     color: #000;
 }
 .fixed-phone{
+    z-index: 999;
     position: fixed;
     bottom: 30px;
     right: 30px;
@@ -803,26 +804,27 @@ body{
 .project-2-carousel{
     position: relative;
 }
-.project-2-prev,
-.project-2-next {
+.project-prev,
+.project-next {
     position: absolute;
     cursor: pointer;
     background: transparent;
     z-index: 2;
 }
-.project-2-prev img,
-.project-2-next img{
+.project-prev img,
+.project-next img{
     width: 40px;
     height: 40px;
 }
-.project-2-prev{
-    top: calc(50% - 42px);
+.project-prev{
+    top: 50%;
     left: -20px;
+    transform: translateY(-50%);
 }
-.project-2-next{
-    top: calc(50% - 42px);
+.project-next{
+    top: 50%;
     right: -20px;
-    transform: rotate(180deg);
+    transform: translateY(-50%) rotate(180deg);
 }
 
 
