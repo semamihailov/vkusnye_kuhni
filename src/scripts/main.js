@@ -1,8 +1,6 @@
 // 'use strict'
 
 $(function(){
-    console.log("ready!");
-
 
     let testimonialsCarousel = $(".carousel-one"); // Используем правильный класс
     testimonialsCarousel.owlCarousel({
@@ -83,7 +81,7 @@ $(function(){
             top: -30
         });
 
-        const offset = 30;
+        const offset = 0;
         const scrollPosition = section[0].getBoundingClientRect().top + $(window).scrollTop() - offset;
 
         $('html, body').animate({

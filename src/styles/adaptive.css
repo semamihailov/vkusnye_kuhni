@@ -5,16 +5,10 @@
     .testimonialsCarousel-next{
         right: 30px;
     }
-    .main-screen-content{
-        margin-top: 130px;
-    }
 }
 @media screen and (max-width: 1240px) {
     .container{
         padding: 0 20px;
-    }
-    .projects-items{
-        gap: 30px;
     }
     .testimonials-h2-title{
         font-size: 27px;
@@ -30,6 +24,7 @@
     .projects-items{
         grid-template-columns: 1fr 1fr;
         justify-items: center;
+        gap: 35px;
     }
     .projects-item{
         width: 465px;
@@ -116,7 +111,7 @@
     .how-work-item-title{
         font-size: 18px;
         max-width: 300px;
-        margin: 0 auto 15px auto;
+        margin: 0 auto 10px auto;
     }
     .how-work-item-text{
         font-size: 14px;
@@ -163,6 +158,9 @@
     }
     .main-video-open{
         display: none;
+    }
+    .how-work-row-double{
+        align-items: flex-start;
     }
     .how-work-row-double:after,
     .how-work-row-double:before{
@@ -244,6 +242,9 @@
     .footer .container{
         flex-direction: column;
         row-gap: 20px;
+    }
+    .header-button{
+        height: 40px;
     }
 }
 
